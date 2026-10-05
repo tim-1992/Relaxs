@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101c1a">
+  <meta name="description" content="Relaxs：安顿身体、梳理担忧、处理工作中的具体问题，带走一个可执行的下一步。">
+  <title>Relaxs · 工作之余，照顾自己</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/care.css">
+  <link rel="stylesheet" href="./src/care-practices.css">
+</head>
+<body class="care-app">
+  <a class="care-skip" href="#main">跳转到主要内容</a>
+  <header class="care-header">
+    <a class="care-brand" href="#home" aria-label="Relaxs首页"><span class="care-logo" aria-hidden="true">Ⅱ</span><strong>Relaxs</strong><small>A LITTLE SPACE</small></a>
+    <details class="care-menu">
+      <summary aria-label="打开更多选项"><span>更多</span><i aria-hidden="true">···</i></summary>
+      <nav aria-label="更多选项">
+        <a href="#home">回到首页</a>
+        <a href="#calm">慢下来</a>
+        <a href="#organize">理一件事</a>
+        <a href="#notes">本次记录</a>
+        <a href="#evidence">方法与依据</a>
+        <button data-help>寻找支持 ↗</button>
+      </nav>
+    </details>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="care-footer"><span>一点空闲，留给自己。</span><button class="care-text-button" data-help>需要支持？</button></footer>
+  <dialog id="care-help-dialog" aria-labelledby="care-help-title"></dialog>
+  <dialog id="care-leave-dialog" aria-labelledby="care-leave-title"></dialog>
+  <div id="care-toast" class="care-toast" role="status" aria-live="polite"></div>
+  <script defer src="./src/care-app.js"></script>
+</body>
+</html>

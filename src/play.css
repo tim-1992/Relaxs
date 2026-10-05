@@ -1,0 +1,50 @@
+.play-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(260px, 1fr); gap: 44px; align-items: center; }
+.play-board { position: relative; overflow: hidden; min-width: 0; background: radial-gradient(ellipse at 50% 40%, #34594d69, #102720); }
+.play-board-label { position: absolute; z-index: 1; top: 22px; left: 24px; right: 24px; display: flex; justify-content: space-between; gap: 12px; color: #b3c7b3; font-size: 10px; letter-spacing: 1px; pointer-events: none; }
+.play-board-label > span:first-child { font-size: 8px; letter-spacing: 2px; }
+.play-canvas { width: 100%; height: 555px; display: block; touch-action: none; }
+.play-canvas.is-flat { width: min(100%, 430px); height: auto; aspect-ratio: 760/980; margin: 35px auto 15px; }
+.play-sidebar { padding: 14px 8px 14px 0; }
+.play-levels { display: flex; gap: 9px; margin-bottom: 35px; }
+.play-levels button { width: 38px; height: 38px; border: 1px solid #c5d5bb25; border-radius: 50%; background: transparent; color: #9baea0; font: 11px Georgia,serif; }
+.play-levels [aria-pressed="true"] { color: #1d3127; background: var(--accent); border-color: var(--accent); }
+.play-sidebar h2 { font-weight: 400; font-size: 27px; letter-spacing: 2px; margin: 12px 0; }
+.play-subtitle { font-size: 12px; color: #a0b2a4; line-height: 1.9; min-height: 46px; }
+.play-objectives { list-style: none; display: flex; gap: 7px; margin: 12px 0; padding: 0; flex-wrap: wrap; }
+.play-objectives li { display: flex; align-items: center; gap: 6px; color: #95a690; border: 1px solid #a6c49430; border-radius: 9px; padding: 8px; }
+.play-objectives li span { border: 1px solid currentColor; border-radius: 50%; width: 19px; height: 19px; display: grid; place-items: center; font-size: 10px; }
+.play-objectives li b { font-size: 11px; font-weight: 400; }
+.play-objectives .is-current { background: #d4e4ab; color: #264530; }
+.play-objectives .is-done { opacity: .4; text-decoration: line-through; }
+.play-budget { color: #e1c09d; font-size: 12px; margin-top: 16px; min-height: 18px; }
+.play-angle-label { display: flex; justify-content: space-between; font-size: 12px; color: #c3d1be; margin: 28px 0 12px; }
+.play-angle-label output { font-family: Georgia,serif; color: var(--accent); }
+#play-angle { width: 100%; accent-color: var(--accent); cursor: ew-resize; }
+.play-angle-ticks { display: flex; justify-content: space-between; font-size: 9px; color: #8ea496; margin: 8px 0 20px; }
+.play-fire { width: 100%; }
+.play-secondary { margin-top: 13px; gap: 8px !important; }
+.play-secondary .experience-button { padding: 10px 12px; font-size: 11px; }
+.play-mirrors { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.play-mirrors:empty { display: none; }
+.play-mirrors button { font-size: 11px; color: #e1ba97; border-color: #deb28a44; }
+.play-hint { color: #c5d7b3; font-size: 12px; line-height: 1.9; border-left: 1px solid #d4eaa66b; padding-left: 12px; margin-top: 16px; }
+.play-status { margin-top: 22px; min-height: 42px; }
+.play-sound { background: none; color: #a5b79e; font-size: 11px; padding: 12px 0; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #a5b79e55; }
+.play-footnote { font-size: 10px; color: #7f988a; line-height: 1.9; margin-top: 8px; }
+.play-curtain, .play-win, .play-fail { position: absolute; z-index: 2; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 25px; text-align: center; padding: 24px; background: #10231fec; backdrop-filter: blur(8px); }
+.play-fail > span { color: #e1c09d; font-size: 44px; }
+.play-fail h2 { font-size: 23px; font-weight: 400; }
+.play-fail p { font-size: 12px; line-height: 1.9; color: #b4c8ac; max-width: 260px; }
+.play-win { background: #183c32e8; }
+.play-win > span { font-size: 56px; color: var(--accent); }
+.play-win h2 { font-size: 26px; font-weight: 400; letter-spacing: 2px; }
+.play-win > p { font-size: 12px; color: #b4c8ac; }
+@media(max-width: 760px) {
+  .play-layout { grid-template-columns: 1fr; gap: 25px; }
+  .play-canvas { height: min(120vw, 500px); }
+  .play-sidebar { padding: 0 8px; }
+  .play-levels { margin-bottom: 22px; }
+  .play-subtitle { min-height: 0; }
+  .play-status { min-height: 0; }
+  .play-board-label { left: 18px; right: 18px; top: 16px; }
+}

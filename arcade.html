@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101014">
+  <title>动作游乐 · Relaxs</title>
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/arcade.css">
+  <link rel="stylesheet" href="./src/neon.css">
+  <link rel="stylesheet" href="./src/arcade-preview.css">
+</head>
+<body class="neon arcade-preview">
+  <header class="preview-header">
+    <a class="mini-brand" href="./index.html" aria-label="回到Relaxs游戏大厅"><i class="brand-pause" aria-hidden="true"><b></b><b></b></i>Relaxs<span>ARCADE</span></a>
+    <a class="text-button" href="./index.html">← 回游戏大厅</a>
+  </header>
+  <main class="arcade-preview-main">
+    <nav class="preview-game-nav" id="preview-game-nav" aria-label="切换小游戏"></nav>
+    <div class="preview-title"><div><span class="eyebrow" id="preview-mode">QUICK PLAY / 直接试玩</span><h1 id="preview-title">准备开玩。</h1></div><span class="preview-badge">FREE PLAY</span></div>
+    <section class="preview-game-surface" id="arcade-preview" aria-labelledby="preview-title"><p>正在准备游乐场…</p></section>
+    <p class="preview-footer">想体验开场挑战与回合记录？<a href="./index.html">回大厅开启完整体验 →</a></p>
+  </main>
+  <script defer src="./src/arcade-preview.js"></script>
+</body>
+</html>
