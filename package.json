@@ -1,0 +1,19 @@
+{
+  "name": "tripson-emotion-playground",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Relaxs — a calm, interactive 3D playground powered by original Tripo assets.",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "build": "node scripts/build-static.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

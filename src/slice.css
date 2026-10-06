@@ -1,0 +1,136 @@
+.slice-experience { max-width: 1120px; }
+.slice-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.slice-eyebrow { display: flex; align-items: center; gap: 13px; color: #cfc9b7; font-size: 10px; letter-spacing: .12em; }
+.slice-eyebrow span { color: #eeb39e; font-size: 9px; letter-spacing: .2em; }
+.slice-eyebrow i { width: 28px; height: 1px; background: #ebbaa754; }
+.slice-heading h1 { margin: 14px 0 8px; font-size: clamp(32px, 4.1vw, 47px); letter-spacing: .05em; }
+.slice-heading h1 span { color: #f1b5a1; }
+.slice-heading h1:focus { outline: none; }
+.slice-heading > div > p:last-child { color: #aab9ae; font-size: 12px; line-height: 1.8; }
+.slice-modes { display: inline-flex; flex-shrink: 0; padding: 4px; gap: 2px; background: #0c191a55; border: 1px solid #d4d1b923; border-radius: 30px; }
+.slice-modes button { background: transparent; border-radius: 24px; padding: 10px 18px; min-height: 42px; font-size: 11px; color: #a6b3ab; }
+.slice-modes button[aria-pressed="true"] { color: #f2dbc7; background: #ecd2b71a; box-shadow: inset 0 0 0 1px #efd8bb23; }
+.slice-chapters { display: flex; gap: 8px; margin-bottom: 17px; }
+.slice-chapters button { display: flex; align-items: center; gap: 10px; padding: 12px 17px; min-height: 46px; color: #a8b6ac; background: transparent; border: 1px solid transparent; border-radius: 12px; font-size: 12px; }
+.slice-chapters button > span { color: #799086; font: 11px Georgia, serif; }
+.slice-chapters button i { font-size: 13px; font-style: normal; opacity: 0; padding-left: 7px; }
+.slice-chapters button[aria-pressed="true"] { background: #ebc4ac0a; border-color: #eabda64a; color: #f0d3bc; }
+.slice-chapters button[aria-pressed="true"] span { color: #dfa68d; }
+.slice-chapters button[aria-pressed="true"] i { opacity: 1; }
+.slice-chapters button:hover { background: #ecd2b70d; }
+.slice-board { border-radius: 26px; border: 1px solid #dccdbb2c; overflow: hidden; box-shadow: 0 20px 80px #040f1524; background: #13282b88; }
+.slice-hud { display: flex; align-items: center; gap: 35px; padding: 20px 28px 16px; background: #dfd7b805; border-bottom: 1px solid #d8d8c21a; }
+.slice-hud > div { display: flex; align-items: baseline; gap: 9px; }
+.slice-hud span { color: #96aaa0; font-size: 10px; letter-spacing: .06em; }
+.slice-hud strong { color: #f4ddc5; font-family: Georgia, serif; font-size: 26px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.slice-hud small { color: #879d93; font-size: 11px; }
+.slice-hud .slice-chain-stat strong { font: 15px Georgia, serif; color: #c4d6b7; }
+.slice-hud .slice-wave-stat { margin-left: auto; align-items: flex-end; flex-direction: column; gap: 8px; }
+.slice-wave-stat span:last-child { color: #efb59f; letter-spacing: .25em; font-size: 10px; }
+.slice-arena { position: relative; isolation: isolate; height: clamp(390px, 46vw, 540px); overflow: hidden; background: radial-gradient(ellipse at 50% 68%, #50736347, transparent 63%), radial-gradient(ellipse at 5% 20%, #a56c5420, transparent 54%), #15292c; touch-action: none; user-select: none; cursor: crosshair; outline-offset: -4px; }
+.slice-arena::before { position: absolute; z-index: -1; content: ""; width: 68%; aspect-ratio: 1; border-radius: 50%; border: 1px solid #edccb018; left: 16%; top: -25%; pointer-events: none; box-shadow: 0 0 0 80px #d9c6a303, 0 0 0 160px #d9c6a303; }
+.slice-canvas, .slice-fallback { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.slice-arena-mark { position: absolute; top: 20px; left: 28px; font-size: 8px; letter-spacing: .24em; color: #bdd0b44c; pointer-events: none; }
+.slice-cover { position: absolute; z-index: 3; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; gap: 16px; padding: 28px; cursor: default; background: #14272bec; }
+.slice-cover-kicker { color: #e5af96; font-size: 9px; letter-spacing: .16em; }
+.slice-cover h2 { font-family: "Songti SC", "STSong", serif; font-weight: 400; font-size: 31px; line-height: 1.45; letter-spacing: .04em; color: #f2e5ca; }
+.slice-cover h2:focus { outline: none; }
+.slice-cover p:not(.slice-cover-kicker) { font-size: 11px; line-height: 1.9; color: #abbdaf; max-width: 28em; }
+.slice-cover .experience-button { margin-top: 8px; min-width: 168px; }
+.slice-ready { justify-content: flex-end; padding-bottom: 32px; background: linear-gradient(0deg, #15292c, #15292c00 75%); }
+.slice-ready-copy { display: flex; flex-direction: column; align-items: center; gap: 11px; }
+.slice-ready h2 { font-size: 26px; }
+.slice-ready h2 br { display: none; }
+.slice-ready .experience-button { margin-top: 5px; }
+.slice-paused, .slice-result { backdrop-filter: blur(7px); }
+.slice-result-stats { display: flex; gap: 25px; padding: 17px 0; }
+.slice-result-stats > span { display: flex; flex-direction: column; gap: 9px; font-size: 10px; color: #95a89b; }
+.slice-result-stats b { font: 25px Georgia, serif; color: #edcfb1; }
+.slice-result-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.slice-result-actions .experience-button { min-width: 130px; }
+.slice-feedback { position: absolute; z-index: 2; left: 50%; top: 15%; transform: translateX(-50%); display: flex; align-items: center; flex-direction: column; gap: 5px; color: #f2cf9b; pointer-events: none; text-shadow: 0 2px 16px #111c12; }
+.slice-feedback strong { font: italic 38px Georgia, "STSong", serif; white-space: nowrap; }
+.slice-feedback span { font-size: 10px; letter-spacing: .12em; white-space: nowrap; }
+.slice-feedback.is-hazard { color: #efb099; }
+.slice-cursor { position: absolute; z-index: 2; width: 24px; height: 24px; border: 1px solid #f6e6cf; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; box-shadow: 0 0 16px #f4ccba44; }
+.slice-cursor i { position: absolute; width: 4px; height: 4px; background: #f8dbc0; top: calc(50% - 2px); left: calc(50% - 2px); border-radius: 100%; }
+.slice-cursor.is-cutting { box-shadow: 0 0 20px #fff6d3b0; background: #e7cfb244; }
+.slice-board-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid #c5d2bd16; padding: 15px 28px; background: #0e232780; }
+.slice-board-foot p { color: #a6b9ad; font-size: 10px; letter-spacing: .035em; }
+.slice-board-foot p > span { color: #ecba9b; margin-right: 6px; font-size: 15px; }
+.slice-legend { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #99ae9f; }
+.slice-legend span { margin-left: 7px; white-space: nowrap; }
+.slice-dot { display: block; width: 9px; height: 9px; border-radius: 50%; background: #f1b2a5; }
+.slice-dot.mint { background: #acd2b8; border-radius: 2px; }
+.slice-dot.gold { background: #e8c382; border-radius: 1px; transform: rotate(45deg); scale: .8; }
+.slice-toolbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 22px; margin-top: 17px; }
+.slice-toolbar > div { display: flex; flex-shrink: 0; gap: 3px; }
+.slice-status { padding: 9px 0; font-size: 11px; color: #a5b7a8; line-height: 1.9; max-width: 620px; min-height: 40px; }
+.slice-tool { background: transparent; padding: 10px 13px; font-size: 11px; color: #c1c9b9; min-height: 42px; border-radius: 9px; }
+.slice-tool:hover:not(:disabled) { background: #dcc8aa0f; }
+.slice-help { margin-top: 8px; color: #849d92; font-size: 11px; border-bottom: 1px solid #cbd8bd14; }
+.slice-help summary { cursor: pointer; display: flex; gap: 30px; align-items: center; padding: 11px 0 17px; list-style: none; width: fit-content; }
+.slice-help summary::-webkit-details-marker { display: none; }
+.slice-help summary span { color: #d4ba9f; }
+.slice-help > div { display: grid; gap: 9px; padding: 0 0 20px; max-width: 750px; line-height: 1.9; }
+.slice-note-mount .release-leave-a-note { padding: 19px 0; border-top: 0; border-bottom: 0; }
+.slice-note-mount .release-leave-a-note > div > div > p { font-size: 12px; }
+.slice-note-mount .release-leave-a-note .experience-button { min-height: 39px; padding: 10px 15px; font-size: 10px; }
+.slice-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #cbd8bd14; font-size: 10px; color: #79958c; }
+.slice-footer button { min-height: 42px; padding: 0; font-size: 11px; background: none; color: #beceb9; }
+@media (max-width: 760px) {
+  .slice-heading { align-items: flex-start; gap: 18px; flex-direction: column; margin-bottom: 13px; }
+  .slice-heading h1 { font-size: 34px; margin: 11px 0 7px; }
+  .slice-heading > div > p:last-child { font-size: 11px; max-width: 34em; }
+  .slice-modes { align-self: flex-start; }
+  .slice-modes button { min-height: 34px; padding: 6px 16px; }
+  .slice-chapters { gap: 4px; margin-bottom: 13px; }
+  .slice-chapters button { flex: 1; justify-content: center; padding: 9px 7px; gap: 7px; font-size: 11px; }
+  .slice-chapters button i { display: none; }
+  .slice-board { border-radius: 19px; }
+  .slice-hud { gap: 16px; padding: 15px 16px; }
+  .slice-hud > div:not(.slice-wave-stat) { flex-wrap: wrap; gap: 5px; }
+  .slice-hud .slice-chain-stat { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .slice-hud .slice-points { max-width: 130px; }
+  .slice-points > span { flex-basis: 100%; }
+  .slice-hud strong { font-size: 24px; }
+  .slice-hud span { font-size: 9px; }
+  .slice-hud small { font-size: 10px; }
+  .slice-arena { height: 395px; }
+  .slice-arena-mark { top: 18px; left: 17px; font-size: 7px; }
+  .slice-ready { padding: 20px 16px 27px; }
+  .slice-ready h2 { font-size: 23px; }
+  .slice-ready-copy > p:not(.slice-cover-kicker) { max-width: 20em; font-size: 10px; }
+  .slice-cover h2 { font-size: 26px; }
+  .slice-cover { padding-left: 20px; padding-right: 20px; }
+  .slice-board-foot { padding: 11px 16px; }
+  .slice-board-foot p { font-size: 9px; }
+  .slice-legend span { display: none; }
+  .slice-toolbar { flex-direction: column; gap: 1px; margin-top: 10px; }
+  .slice-toolbar > div { align-self: flex-end; }
+  .slice-tool { padding: 9px 12px; }
+  .slice-help { margin-top: 0; }
+  .slice-note-mount .release-leave-a-note { gap: 15px; }
+  .slice-footer { margin-top: 4px; }
+}
+@media (max-width: 390px) {
+  .slice-eyebrow { gap: 9px; font-size: 9px; }
+  .slice-eyebrow i { width: 14px; }
+  .slice-hud { padding: 14px 12px; gap: 10px; }
+  .slice-hud .slice-points { max-width: 90px; }
+  .slice-wave-stat span:last-child { letter-spacing: .12em; }
+  .slice-ready h2 br { display: block; }
+  .slice-ready-copy { gap: 9px; }
+  .slice-cover .experience-button { min-width: 140px; }
+  .slice-result-actions .experience-button { min-width: 105px; padding: 11px 13px; }
+  .slice-board-foot { padding: 11px 12px; }
+  .slice-note-mount .release-leave-a-note { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+@media (min-width: 540px) and (max-width: 760px) {
+  .slice-heading { flex-direction: row; align-items: flex-end; }
+  .slice-modes { align-self: flex-end; }
+  .slice-heading > div:first-child { min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slice-experience *, .slice-experience *::before, .slice-experience *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

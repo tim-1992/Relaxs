@@ -1,0 +1,458 @@
+/* Load after relaxs-polish.css. Scoped to the five compact gameplay pages;
+   the extra shell specificity also covers styles mounted by the experiences. */
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) {
+  --layout-canvas-height: clamp(320px, calc(100svh - 360px), 680px);
+  width: min(1280px, calc(100% - 48px));
+  max-width: 1280px;
+  min-width: 0;
+  margin: 0 auto 20px;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* Keep shared navigation changes local to these pages, including hub children. */
+.planet-app:has(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) .universe {
+  padding-top: 8px;
+}
+.planet-app:has(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) .game-difficulty {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto 6px;
+}
+.planet-app:has(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) .game-difficulty > summary {
+  min-height: 40px;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 11px;
+}
+.planet-app:has(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) .difficulty-options button {
+  min-height: 40px;
+}
+.planet-app:has(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) .back-button {
+  min-height: 40px;
+}
+.destruction-hub:has(.demolition-experience, .blast-experience, .crusher-experience) {
+  width: min(1280px, calc(100% - 48px));
+  min-width: 0;
+}
+.destruction-hub .destruction-mount > .experience-shell:is(.demolition-experience, .blast-experience, .crusher-experience) {
+  width: 100%;
+  max-width: none;
+  --layout-canvas-height: clamp(320px, calc(100svh - 336px), 680px);
+}
+.destruction-hub:has(.demolition-experience, .blast-experience, .crusher-experience) .destruction-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0;
+}
+.destruction-hub:has(.demolition-experience, .blast-experience, .crusher-experience) .destruction-nav button {
+  min-height: 40px;
+  min-width: 0;
+  padding: 7px 13px;
+  gap: 7px;
+  border-radius: 99px;
+}
+.destruction-hub:has(.demolition-experience, .blast-experience, .crusher-experience) .destruction-switch-note {
+  margin: 3px 2px 5px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #91a5ad;
+}
+
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-heading, .moles-heading, .demo-heading, .blast-heading, .crusher-heading) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin: 0 0 8px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-heading, .moles-heading, .demo-heading, .blast-heading, .crusher-heading) > div {
+  min-width: 0;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-heading, .moles-heading, .demo-heading, .blast-heading, .crusher-heading) h1 {
+  margin: 1px 0;
+  font: 500 24px/1.3 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: .02em;
+  white-space: normal;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-heading, .moles-heading, .blast-heading, .crusher-heading) > div > p:last-child {
+  max-width: 56em;
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #a3b5ba;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-eyebrow, .moles-eyebrow, .blast-eyebrow, .crusher-eyebrow) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: #8ba4ad;
+  font-size: 9px;
+  line-height: 1.25;
+  letter-spacing: .06em;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-eyebrow, .moles-eyebrow, .blast-eyebrow, .crusher-eyebrow) span {
+  display: inline;
+  margin: 0;
+  font-size: 9px;
+  letter-spacing: .06em;
+}
+.experience-shell.crusher-experience .crusher-heading br { display: none; }
+.experience-shell.crusher-experience .crusher-heading [data-stat="asset"] {
+  margin-inline-start: 8px;
+  color: #91a5ad;
+  font-size: 10px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-modes, .moles-modes, .blast-modes, .crusher-modes) {
+  align-self: center;
+  width: auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 2px;
+  gap: 2px;
+  border-color: #b9e1e224;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-modes, .moles-modes, .blast-modes, .crusher-modes) button {
+  min-height: 40px;
+  padding: 7px 13px;
+  font-size: 11px;
+}
+.experience-shell:is(.slice-experience, .blast-experience, .crusher-experience)
+  :is(.slice-chapters, .blast-layouts, .crusher-picks) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+.experience-shell:is(.slice-experience, .blast-experience, .crusher-experience)
+  :is(.slice-chapters, .blast-layouts, .crusher-picks) > button {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 40px;
+  padding: 6px 12px;
+  gap: 8px;
+  border-radius: 99px;
+  font-size: 11px;
+}
+.experience-shell.blast-experience .blast-layout-icon {
+  width: 20px;
+  height: 22px;
+  font-size: 21px;
+}
+.experience-shell.blast-experience .blast-layouts button > span:nth-child(2) {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 11px;
+}
+.experience-shell.crusher-experience .crusher-picks svg { width: 28px; height: 26px; }
+.experience-shell.crusher-experience .crusher-picks button > span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 7px;
+}
+.experience-shell.crusher-experience .crusher-picks strong { font-size: 11px; }
+.experience-shell.crusher-experience .crusher-picks small { margin: 0; font-size: 10px; }
+.experience-shell.crusher-experience .crusher-picks em { font-size: 11px; }
+
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-board, .moles-board, .demo-board, .blast-board, .crusher-board) {
+  min-width: 0;
+  border-radius: 16px;
+  border-color: #b9e1e226;
+  box-shadow: 0 12px 40px #00000018;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-hud, .moles-hud, .blast-hud, .crusher-hud) {
+  min-width: 0;
+  min-height: 46px;
+  padding: 8px 16px;
+  gap: 12px 24px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-hud, .moles-hud, .blast-hud, .crusher-hud) > div {
+  min-width: 0;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 7px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-hud, .moles-hud, .blast-hud, .crusher-hud) strong {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.experience-shell.slice-experience .slice-hud .slice-chain-stat strong { font-size: 17px; }
+.experience-shell.slice-experience .slice-hud .slice-wave-stat { gap: 12px; align-items: center; }
+.experience-shell.slice-experience .slice-hud .slice-points { max-width: none; }
+.experience-shell.slice-experience .slice-points > span { flex-basis: auto; }
+.experience-shell.moles-experience .moles-hud { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.experience-shell.moles-experience .moles-hud .moles-score strong { font-size: 24px; }
+.experience-shell.moles-experience .moles-hud .moles-clock { justify-content: flex-end; }
+.experience-shell.blast-experience .blast-hud .blast-chain strong { font-size: 20px; }
+.experience-shell.crusher-experience .crusher-difficulty { flex-wrap: wrap; gap: 5px; }
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-arena, .moles-arena, .demo-stage, .blast-arena, .crusher-arena) {
+  min-width: 0;
+  min-height: 320px;
+  height: var(--layout-canvas-height);
+}
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience)
+  :is(.slice-board-foot, .moles-board-foot, .demo-room-foot) {
+  min-height: 30px;
+  padding: 6px 14px;
+  gap: 8px 12px;
+  flex-wrap: wrap;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-toolbar, .moles-toolbar, .blast-toolbar, .crusher-toolbar) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 12px;
+  margin-top: 6px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-status, .moles-status, .blast-status, .crusher-status) {
+  flex: 1 1 260px;
+  min-height: 0;
+  min-width: 0;
+  max-width: none;
+  padding: 5px 0;
+  margin: 0;
+  line-height: 1.65;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-toolbar, .moles-toolbar, .blast-toolbar, .crusher-toolbar) > div {
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-left: auto;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-toolbar, .moles-toolbar, .demo-actions, .demo-views, .demo-accessible, .blast-toolbar, .crusher-toolbar) :is(button, select, summary) {
+  min-height: 40px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-help, .moles-help, .demo-help, .blast-help, .crusher-help) {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #9bafb5;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+  :is(.slice-help, .moles-help, .demo-help, .blast-help, .crusher-help) > summary {
+  min-height: 40px;
+  padding-block: 10px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-footer, .moles-footer, .blast-footer, .crusher-footer) {
+  margin-top: 6px;
+  padding-top: 6px;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+  :is(.slice-footer, .moles-footer, .blast-footer, .crusher-footer) button {
+  min-height: 40px;
+}
+
+/* Ready/result copy stays readable without covering the entire small world. */
+.experience-shell:is(.slice-experience, .moles-experience) :is(.slice-cover, .moles-cover) {
+  padding: 16px;
+  gap: 10px;
+  overflow-y: auto;
+}
+.experience-shell:is(.slice-experience, .moles-experience) :is(.slice-cover, .moles-cover) h2 {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 450;
+  line-height: 1.35;
+}
+.experience-shell:is(.slice-experience, .moles-experience) :is(.slice-ready, .moles-intro) h2 br { display: none; }
+.experience-shell:is(.slice-experience, .moles-experience) :is(.slice-ready-copy, .moles-cover-copy) { gap: 8px; }
+.experience-shell.slice-experience .slice-ready { padding-bottom: 18px; }
+.experience-shell.slice-experience .slice-result-stats { padding: 8px 0; }
+.experience-shell.slice-experience .slice-note-mount .experience-button { min-height: 40px; }
+.experience-shell.moles-experience .moles-intro {
+  place-items: end center;
+  background: linear-gradient(0deg, #183b31d9, #183b3100 85%);
+}
+.experience-shell.moles-experience .moles-intro .moles-cover-copy {
+  width: min(410px, 100%);
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+.experience-shell.moles-experience .moles-cover-tip { white-space: normal; line-height: 1.5; }
+.experience-shell.moles-experience .moles-result-score { font-size: 38px; }
+.experience-shell.moles-experience .moles-result-stats { gap: 8px; padding: 3px 0; }
+.experience-shell.moles-experience .moles-character-panel { margin: 0 0 6px; border-radius: 10px; background: transparent; }
+.experience-shell.moles-experience .moles-character-panel > summary { min-height: 40px; padding: 7px 12px; }
+.experience-shell.moles-experience .moles-legend { margin: 6px 0 0; gap: 6px; }
+.experience-shell.moles-experience .moles-legend > div {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 4px 8px;
+  padding: 6px 8px;
+  border: 0;
+  background: transparent;
+}
+.experience-shell.moles-experience .moles-legend-icon { flex-shrink: 0; width: 27px; height: 26px; scale: .8; }
+.experience-shell.moles-experience .moles-legend strong { font-size: 10px; }
+.experience-shell.moles-experience .moles-legend > div > span:last-child { color: #a4b89d; font-size: 10px; }
+
+.experience-shell.demolition-experience .demo-title { width: auto; }
+.experience-shell.demolition-experience .demo-actions { position: relative; flex-wrap: wrap; width: auto; max-width: 100%; }
+.experience-shell.demolition-experience .demo-dock { gap: 6px 12px; padding: 6px 10px; }
+.experience-shell.demolition-experience .demo-tools button { min-height: 44px; padding: 6px 10px; }
+.experience-shell.demolition-experience .demo-options > summary { min-height: 40px; }
+.experience-shell.demolition-experience .demo-options { position: static; }
+.experience-shell.demolition-experience .demo-options-panel { max-width: calc(100vw - 32px); }
+.experience-shell.demolition-experience .demo-caption { align-items: center; flex-wrap: wrap; margin-top: 4px; }
+.experience-shell.demolition-experience .demo-help summary { white-space: normal; }
+.experience-shell.demolition-experience .demo-caption [data-action="next"] { min-height: 40px; }
+
+.experience-shell.blast-experience .blast-view-bar { padding: 4px 12px; gap: 8px; flex-wrap: wrap; }
+.experience-shell.blast-experience .blast-view-bar button { min-height: 40px; min-width: 40px; }
+.experience-shell.blast-experience .blast-view-bar p { max-width: none; font-size: 10px; }
+.experience-shell.blast-experience .blast-controls { padding: 12px; }
+.experience-shell.blast-experience .blast-placement { gap: 10px; }
+.experience-shell.blast-experience .blast-type-buttons button { min-height: 44px; padding: 7px 11px; gap: 8px; }
+.experience-shell.blast-experience .blast-type-buttons button > span:last-child { gap: 3px; }
+.experience-shell.blast-experience .blast-pulse-icon { font-size: 22px; }
+.experience-shell.blast-experience .blast-pulse-icon.is-wide { font-size: 28px; }
+.experience-shell.blast-experience .blast-target label { margin-bottom: 5px; }
+.experience-shell.blast-experience .blast-detonation { margin-top: 10px; padding-top: 10px; gap: 10px; }
+.experience-shell.blast-experience .blast-detonate { min-height: 48px; min-width: 190px; padding: 10px 15px; }
+.experience-shell.blast-experience .blast-result { padding: 14px; gap: 12px; }
+.experience-shell.crusher-experience { background: transparent; }
+.experience-shell.crusher-experience .crusher-console { padding: 12px 16px; }
+.experience-shell.crusher-experience .crusher-pressure-heading { margin-bottom: 10px; gap: 8px; }
+.experience-shell.crusher-experience .crusher-pressure-heading strong { font-family: inherit; font-size: 23px; }
+.experience-shell.crusher-experience .crusher-meter { height: 26px; }
+.experience-shell.crusher-experience .crusher-scale { margin: 7px 0 10px; }
+.experience-shell.crusher-experience .crusher-control-row { gap: 8px; }
+.experience-shell.crusher-experience .crusher-control-row button { min-height: 48px; padding: 9px 12px; }
+.experience-shell.crusher-experience .crusher-instructions { margin-top: 8px !important; font-size: 11px; line-height: 1.65; }
+.experience-shell.crusher-experience .crusher-input-mode { min-height: 40px; margin: 4px auto 0; }
+.experience-shell.crusher-experience .crusher-result { padding: 14px 16px; margin-top: 8px; }
+
+/* Wide workbenches put the action beside the scene, keeping its HUD in view. */
+@media (min-width: 1000px) {
+  .experience-shell.blast-experience .blast-board {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+  .experience-shell.blast-experience .blast-hud { grid-area: 1 / 1 / 2 / -1; }
+  .experience-shell.blast-experience .blast-meter { grid-area: 2 / 1 / 3 / -1; }
+  .experience-shell.blast-experience .blast-arena { grid-area: 3 / 1 / 4 / 2; }
+  .experience-shell.blast-experience .blast-view-bar { grid-area: 4 / 1 / 5 / 2; }
+  .experience-shell.blast-experience .blast-result { grid-area: 5 / 1 / 6 / -1; }
+  .experience-shell.blast-experience .blast-controls {
+    grid-area: 3 / 2 / 5 / 3;
+    border-left: 1px solid #b9e1e21a;
+    padding: 14px;
+  }
+  .experience-shell.blast-experience .blast-placement { display: grid; grid-template-columns: 1fr; }
+  .experience-shell.blast-experience .blast-type-buttons button { flex: 1; }
+  .experience-shell.blast-experience .blast-detonation { flex-direction: column; align-items: stretch; }
+  .experience-shell.blast-experience .blast-marker-summary { gap: 6px; }
+  .experience-shell.blast-experience .blast-detonate { width: 100%; }
+  .experience-shell.crusher-experience .crusher-board {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+  .experience-shell.crusher-experience .crusher-hud { grid-column: 1 / -1; }
+  .experience-shell.crusher-experience .crusher-console {
+    border-top: 0;
+    border-left: 1px solid #b9e1e21a;
+    padding: 16px;
+  }
+  .experience-shell.crusher-experience .crusher-pressure-heading { flex-wrap: wrap; }
+  .experience-shell.crusher-experience .crusher-control-row { grid-template-columns: minmax(0, 1fr); }
+  .experience-shell.crusher-experience .crusher-instructions { text-align: left; }
+  .experience-shell:is(.blast-experience, .crusher-experience) :is(.blast-arena, .crusher-arena) {
+    /* A definite canvas parent height avoids intrinsic WebGL canvas sizing
+       expanding the grid row after the renderer resizes its drawing buffer. */
+    height: clamp(320px, calc(100svh - 402px), 680px);
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 760px) {
+  .experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) {
+    width: calc(100% - 24px);
+    --layout-canvas-height: clamp(320px, 48svh, 480px);
+  }
+  .planet-app:has(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience) .game-difficulty,
+  .destruction-hub:has(.demolition-experience, .blast-experience, .crusher-experience) {
+    width: calc(100% - 24px);
+  }
+  .destruction-hub .destruction-mount > .experience-shell:is(.demolition-experience, .blast-experience, .crusher-experience) {
+    --layout-canvas-height: clamp(320px, 48svh, 480px);
+  }
+  .experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+    :is(.slice-heading, .moles-heading, .blast-heading, .crusher-heading) > div:first-child {
+    flex-basis: 100%;
+  }
+  .experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+    :is(.slice-heading, .moles-heading, .blast-heading, .crusher-heading) {
+    gap: 6px;
+  }
+  .experience-shell:is(.slice-experience, .blast-experience, .crusher-experience)
+    :is(.slice-chapters, .blast-layouts, .crusher-picks) > button {
+    flex: 1 1 90px;
+    padding: 6px 8px;
+    gap: 5px;
+  }
+  .experience-shell.crusher-experience .crusher-picks button > span { flex-direction: column; gap: 3px; }
+  .experience-shell:is(.slice-experience, .moles-experience, .blast-experience, .crusher-experience)
+    :is(.slice-hud, .moles-hud, .blast-hud, .crusher-hud) {
+    padding: 8px 12px;
+    gap: 8px 12px;
+    flex-wrap: wrap;
+  }
+  .experience-shell.moles-experience .moles-hud > div { flex-direction: column; gap: 3px; }
+  .experience-shell.moles-experience .moles-hud .moles-clock { align-items: flex-end; }
+  .experience-shell.slice-experience .slice-hud .slice-wave-stat { flex-direction: column; gap: 4px; align-items: flex-end; }
+  .experience-shell.slice-experience .slice-hud .slice-chain-stat { flex-direction: column; gap: 3px; }
+  .experience-shell.blast-experience .blast-phase { display: inline; font-size: 9px; }
+  .experience-shell.blast-experience .blast-placement { grid-template-columns: minmax(0, 1fr) auto; }
+  .experience-shell.blast-experience .blast-target { min-width: 0; }
+  .experience-shell.blast-experience .blast-target label span { margin-left: 0; }
+  .experience-shell.blast-experience .blast-detonate { min-width: 0; }
+  .experience-shell.blast-experience .blast-marker-summary { min-height: 0; }
+  .experience-shell.demolition-experience .demo-heading { gap: 4px 10px; }
+  .experience-shell.demolition-experience .demo-title { flex: 1 1 100%; }
+  .experience-shell.demolition-experience .demo-actions { flex: 1 1 100%; margin-left: 0; justify-content: space-between; }
+  .experience-shell.demolition-experience .demo-actions button { padding-inline: 6px; }
+  .experience-shell.demolition-experience .demo-selected { white-space: normal; overflow-wrap: anywhere; }
+  .experience-shell.demolition-experience .demo-accessible { min-width: 0; flex-basis: 100%; }
+  .experience-shell.demolition-experience .demo-accessible select { width: 0; min-width: 0; }
+  .experience-shell.demolition-experience .demo-tally { display: inline; margin-left: auto; font-size: 10px; }
+  .experience-shell.demolition-experience .demo-caption .demo-status { flex-basis: 100%; }
+  .experience-shell.moles-experience .moles-character-actions { min-width: 0; }
+  .experience-shell.moles-experience .moles-character-actions input { min-width: 0; width: 100%; }
+  .experience-shell:is(.slice-experience, .moles-experience, .demolition-experience, .blast-experience, .crusher-experience)
+    :is(.slice-help, .moles-help, .demo-help, .blast-help, .crusher-help) p {
+    overflow-wrap: anywhere;
+  }
+}

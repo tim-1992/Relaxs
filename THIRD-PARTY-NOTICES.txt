@@ -1,0 +1,17 @@
+Relaxs — THIRD-PARTY NOTICE INDEX
+Personal project by 袁宠 and 秦岱. Team: 数据工程.
+
+Complete audit-approved notices and license texts:
+  docs/submission/THIRD_PARTY_NOTICES.md
+Asset provenance and production record:
+  docs/submission/ASSET_PROVENANCE.md
+
+The complete notices include the upstream MIT, ISC and Apache License 2.0
+texts and attributions identified by the project audit. They are included
+verbatim; this short index is not a replacement for the full notices.
+
+Additional verbatim installed dependency licenses:
+  Three.js 0.186.1: LICENSES/three-LICENSE.txt
+  esbuild 0.28.2: LICENSES/esbuild-LICENSE.txt
+No node_modules or esbuild executable is shipped. Existing distribution legal
+comments are retained unchanged.

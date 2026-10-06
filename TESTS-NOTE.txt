@@ -1,0 +1,18 @@
+Public-source test notes
+
+This package includes all 69 test files, tests/tripo-fixture.mjs, and the
+scripts/tripo-api.mjs module imported by the generation-client mock tests.
+The helper module contains code only; no API credentials are included, and it
+is not invoked by the application. Packaging made no API requests.
+
+Run npm ci, then npm test. The test command also rebuilds dist.
+Raw original GLB artifacts are intentionally omitted. Portable asset tests use
+the included src/tripo-data-*.js bytes; comparisons requiring original exports
+skip when those optional originals are absent.
+
+Gauss/parent reported the completed verification:
+- Clean source: 612 passed, 30 skipped, 0 failed.
+- Full checkout with original artifacts: 642 passed.
+These results were reported before final packaging. No additional application
+tests or builds were run by the packaging task. Final packaging verified CRC,
+SHA-256, the exact public file whitelist, and sensitive-content patterns.

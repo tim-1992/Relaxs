@@ -1,0 +1,16 @@
+Relaxs — 源码包 / SOURCE
+作者：袁宠、秦岱；团队：数据工程。个人参赛作品，非 VAST 工作成果。
+
+解压后，在本目录打开终端（需要 Node.js 与 npm）：
+  npm ci
+  npm run dev
+浏览器打开 http://127.0.0.1:4173 。推荐使用本地 HTTP。
+测试：npm test（会重建 dist）；自行构建：npm run build。
+
+20 个预生成 Tripo 模型完整保留在 src/tripo-data-*.js；运行游戏无需 API key。
+本包不含 node_modules、环境文件、原始模型、私人记录或旧部署资料。
+69 个测试文件和共享 fixture helper 已包含，原始模型缺失时相关比较会跳过。
+测试依赖的 Tripo 客户端模块仅含源码，无凭据；详见 TESTS-NOTE.txt。
+完整第三方声明和素材来源见 docs/submission/，原始依赖许可证另见 LICENSES/。
+.gitignore 已包含，可防止依赖、环境文件、dist 和 artifacts 被误提交。
+本次打包未重新运行应用测试、构建或 API，未验证 file:// 双击打开。

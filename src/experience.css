@@ -1,0 +1,41 @@
+.experience-shell { width: min(1120px, calc(100% - 88px)); margin: 0 auto 42px; }
+.experience-heading { text-align: center; margin: 0 auto 35px; }
+.experience-heading h1 { margin-top: 13px; font-size: clamp(28px, 3vw, 38px); letter-spacing: 3px; }
+.experience-heading h1:focus { outline: none; }
+.experience-heading > p:last-child:not(.eyebrow) { font-size: 12px; line-height: 1.9; color: #9eb1a5; margin-top: 13px; letter-spacing: .6px; }
+.experience-panel { background: #bcd4c005; border: 1px solid #c5d7c31e; border-radius: 24px; }
+.experience-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; border-radius: 40px; border: 1px solid #c4d7ba39; background: #b7c9b206; color: #cbd7c3; padding: 11px 20px; font: inherit; font-size: 12px; line-height: 1.4; transition: background .2s, transform .2s; }
+.experience-button:hover:not(:disabled) { background: #b7c9b21a; }
+.experience-button.is-primary { color: #233529; background: var(--accent); border-color: var(--accent); }
+.experience-button.is-primary:hover:not(:disabled) { background: var(--accent); transform: translateY(-1px); filter: brightness(1.06); }
+.experience-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.experience-status { font-size: 12px; line-height: 1.8; color: #a0b3a6; }
+[data-view="planet"] .universe { padding-top: 30px; }
+.embedded-game { max-width: 1030px; }
+.embedded-game .hoops-game { height: min(790px, calc(100dvh - 172px)); }
+.embedded-game .hoops-top > .hoops-icon, .embedded-game .hoops-wordmark { visibility: hidden; pointer-events: none; }
+.embedded-game .hoops-top { justify-content: flex-end; }
+.embedded-game .arcade-module { --arcade-ink: #e1e6d4; --arcade-muted: #a6b7a5; --arcade-line: #9ab08f40; --arcade-green: #c7dda2; max-width: 870px; }
+.embedded-game .arcade-heading { text-align: center; margin: 0 auto 25px; max-width: 640px; }
+.embedded-game .arcade-title { font-family: "Songti SC", "STSong", serif; font-weight: 400; letter-spacing: 2px; font-size: clamp(25px, 3vw, 35px); }
+.embedded-game .arcade-eyebrow { color: #a7bea4; }
+.embedded-game .arcade-stats { max-width: 640px; margin: 0 auto 20px; gap: 16px; }
+.embedded-game .arcade-stat { border: 0; border-bottom: 1px solid #bdd0b426; background: transparent; padding: 12px 0; border-radius: 0; }
+.embedded-game .arcade-stat-value { font-family: Georgia,serif; font-weight: 400; }
+.embedded-game .arcade-tools { max-width: 640px; margin: 0 auto 14px; }
+.embedded-game .arcade-stage { width: min(100%, 640px); border-color: #abc09622; }
+.embedded-game .arcade-button { background: #b8caaa0b; color: #cbdbbd; border-radius: 30px; font-size: 12px; }
+.embedded-game .arcade-button-primary { color: #293e2c; background: #c7dda2; }
+.embedded-game .arcade-status { max-width: 640px; margin: 20px auto 0; background: #bcd4b807; color: #a9bda7; }
+.embedded-game .arcade-footnote { text-align: center; }
+.embedded-game-end { margin: 22px auto 0; justify-content: center; }
+@media(max-width: 760px) {
+  .experience-shell { width: calc(100% - 36px); margin-bottom: 28px; }
+  .experience-heading { padding: 0 8px; margin-bottom: 26px; }
+  .experience-heading h1 { font-size: 27px; letter-spacing: 2px; }
+  .experience-heading > p:last-child:not(.eyebrow) { font-size: 11px; }
+  [data-view="planet"] .universe { padding-top: 25px; }
+  .embedded-game .hoops-game { min-height: 600px; height: calc(100dvh - 158px); }
+  .embedded-game .arcade-stats { gap: 12px; }
+  .embedded-game .arcade-stat { align-items: center; }
+}
